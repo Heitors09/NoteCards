@@ -93,7 +93,7 @@ export function NewNote({ onNoteCreated }: NewNoteProps) {
   }
 
   return (
-    <Dialog.Root>
+    <Dialog.Root onOpenChange={DialogClose}>
       <Dialog.Trigger className="rounded-md flex flex-col bg-slate-700 text-left p-5 gap-3 hover:ring-2 outline-none hover:ring-slate-600 focus-visible:ring-2 focus-visible:ring-lime-400">
         <span className="text-sm font-medium text-slate-200">
           adicionar nota
@@ -107,10 +107,7 @@ export function NewNote({ onNoteCreated }: NewNoteProps) {
       <Dialog.Portal>
         <Dialog.Overlay className="inset-0 fixed bg-black/50" />
         <Dialog.Content className="fixed md:left-1/2 md:top-1/2 inset-0 md:inset-auto md:-translate-x-1/2 md:-translate-y-1/2 md:max-w-[640px] md:h-[60vh] w-full bg-slate-700 md:rounded-md flex flex-col outline-none">
-          <Dialog.Close
-            className="absolute right-0 top-0 bg-slate-800 p-1.5 text-slate-400 hover:text-slate-100"
-            onClick={DialogClose}
-          >
+          <Dialog.Close className="absolute right-0 top-0 bg-slate-800 p-1.5 text-slate-400 hover:text-slate-100">
             <X className="size-5" />
           </Dialog.Close>
           <form className="flex-1 flex flex-col">

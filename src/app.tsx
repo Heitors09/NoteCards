@@ -2,6 +2,7 @@ import logo from "./assets/logo-nlw-expert.svg";
 import { NoteCard } from "./components/note-card";
 import { NewNote } from "./components/new-note-card";
 import { useState } from "react";
+import { ChangeEvent } from "react";
 
 interface Note {
   id: string;
